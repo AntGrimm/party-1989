@@ -24,25 +24,27 @@ export class Movie extends Component {
   render() {
     return (
       <main>
-        <div className="movie-box">
-          <section>
-            {this.state.movieArray.map(results => {
-              return (
-                <div key={results.id}>
-                  <h1>{results.title}</h1>
-                  <img
-                    src={
-                      ['https://image.tmdb.org/t/p/w185_and_h278_bestv2'] +
-                      results['poster_path']
-                    }
-                    alt="movie poster"
-                  />
-                  <p>{results.overview}</p>
-                </div>
-              )
-            })}
-          </section>
-        </div>
+        <nav className="nav-section">
+          <h1 className="nav-title">Movies from 1989!</h1>
+        </nav>
+        <section className="movie-box">
+          {this.state.movieArray.map(results => {
+            return (
+              <div className="movie-list" key={results.id}>
+                <h2>{results.title}</h2>
+                <img
+                  className="movie-poster"
+                  src={
+                    ['https://image.tmdb.org/t/p/w185_and_h278_bestv2'] +
+                    results['poster_path']
+                  }
+                  alt="movie poster"
+                />
+                <p>{results.overview}</p>
+              </div>
+            )
+          })}
+        </section>
       </main>
     )
   }

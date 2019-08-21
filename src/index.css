@@ -9,4 +9,48 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-image: url('./images/80s_background.jpg');
+}
+
+.nav-title {
+  border: 0.5rem dotted mediumvioletred;
+  margin: 0.5rem;
+  background-color: rgb(98, 146, 235, 0.9);
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 40rem;
+  border: 0.5rem dotted mediumvioletred;
+  margin: 0.5rem;
+  background-color: rgb(98, 146, 235, 0.9);
+  padding: 1rem;
+}
+
+.movie-poster {
+  max-width: 12rem;
+}
+
+div > p {
+  text-align: center;
+}
+
+div > h2 {
+  text-align: center;
 }
